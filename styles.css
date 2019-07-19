@@ -1,0 +1,37 @@
+/* IMPORT STATEMENTS - EXAMPLE FONTS FROM GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Metal+Mania');
+
+/* CUSTOM FONTS IN PROJECT */
+@font-face {
+  font-family: 'Booter - Zero Zero';
+  src: url('fonts/Booter\ -\ Zero\ Zero.woff') format('woff');
+  src: url('fonts/Booter\ -\ Zero\ Zero.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* GLOBAL STYLES */
+
+html {
+  /* Used to create sticky footer */
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Next three lines of code are for sticky footer */
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-footer {
+  /* This is for sticky footer */
+  margin-top: auto;
+}
