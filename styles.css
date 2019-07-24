@@ -11,6 +11,15 @@
   font-style: normal;
 }
 
+/* DECLARING CSS VARIABLES(CUSTOM PROPERTIES) */
+:root {
+  /* Example colors */
+  --primary-color: rgb(54, 112, 199);
+  --light-color: #f4f4f4;
+  --dark-color: #333;
+  --warning-color: rgb(99, 36, 36);
+}
+
 /* GLOBAL STYLES */
 
 html {
@@ -29,6 +38,17 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+
+  /*SET UP GRID TO DISPLAY ELEMENTS */
+  display: grid;
+
+  /* This is the rows of my grid and they will have four columns with a 
+   height of auto to fit content inside of it after the forward slash I am
+   defining the width of each of my columns*/
+  grid:
+    'header header header header' auto
+    '...... lists  active ......' auto /
+    1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;
 }
 
 .main-footer {
