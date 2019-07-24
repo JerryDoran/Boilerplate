@@ -31,8 +31,9 @@
     <!-- MAIN STYLE SHEET USING SASS-->
     <link rel="stylesheet" href="dist\css\main.min.css" />
 
-    <!-- MAIN STYLE SHEET USING REG CSS-->
+    <!-- MAIN STYLE SHEET USING REG CSS -->
     <link rel="stylesheet" href="css\styles.css" />
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
     <!----------------------------------- BOOTSTRAP NAV BAR ---------------------------------------->
@@ -116,6 +117,75 @@
       </div>
     </div>
 
+    <!--------------------------------- BOOTSTRAP FORMS --------------------------------------->
+    <form action="" class="main-form needs-validation" novalidate>
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              class="form-control is-invalid"
+            />
+            <div class="invalid-feedback">Invalid First Name</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <input
+              type="text"
+              name="lastname"
+              id="lastname"
+              class="form-control"
+            />
+            <small class="form-text text-muted">Enter your Last Name</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="username">User Name</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          class="form-control is-valid"
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          class="form-control"
+          required
+        />
+        <div class="invalid-feedback">Incorrect Password Entered</div>
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select name="gender" id="gender" class="form-control">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" id="accept-terms" class="form-check-input" />
+        <label for="accept-terms" class="form-check-label"
+          >Accept Terms &amp; Conditions</label
+        >
+      </div>
+      <button type="submit" class="btn btn-outline-primary btn-lg">
+        Submit
+      </button>
+    </form>
+
     <!-- BOOTSTRAP SCRIPTS-->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -135,5 +205,17 @@
 
     <!-- CUSTOM JAVASCRIPTS-->
     <script src="js/app.js"></script>
+
+    <script>
+      const form = document.querySelector('.needs-validation');
+
+      form.addEventListener('submit', e => {
+        if (form.checkValidity() === false) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      });
+    </script>
   </body>
 </html>
