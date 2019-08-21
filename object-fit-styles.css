@@ -1,0 +1,15 @@
+/* OBJECT FIT PROPERTY FOR IMAGES */
+.card {
+  background: lightgreen;
+  width: 500px;
+  height: 500px;
+  padding: 2rem;
+}
+
+.card-image {
+  width: 100%;
+  /* height: 300px; */
+  object-fit: cover;
+  /* object-fit: none; */
+  /* object-position: top left; */
+}
