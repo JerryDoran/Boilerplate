@@ -19,8 +19,11 @@
 
 body {
   height: 100vh;
+
+  /* These lines of code will center items in the middle of a grid */
   display: grid;
   place-items: center;
+
   font-family: 'Oswald', sans-serif;
 }
 

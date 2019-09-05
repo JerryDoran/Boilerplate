@@ -1,0 +1,125 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: arial;
+  font-weight: 300;
+}
+
+img {
+  max-width: 100%;
+}
+
+.basic-example {
+  display: flex;
+  background: #ccc;
+  padding: 3rem;
+  height: 80vh;
+}
+
+/* Will highlight the paragraph targeted in the URL based on the Id it was assigned */
+p:target {
+  background: red;
+}
+
+.button {
+  text-decoration: none;
+  background: #333;
+  color: white;
+  padding: 7px 12px;
+  border-radius: 20px;
+  transition: all 0.25s ease-in-out;
+}
+
+.button:hover {
+  background: #555;
+  padding: 10px 15px;
+}
+
+.portfolio-title {
+  margin-bottom: 20px;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  padding: 5rem;
+  background: #333;
+}
+
+.portfolio-img {
+  width: 100%;
+  height: auto;
+}
+
+.portfolio-item {
+  background: white;
+}
+
+.portfolio-desc {
+  padding: 1.5rem;
+}
+
+.portfolio-title {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+.portfolio-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Makes the light box disappear */
+  transform: scale(0, 0);
+  /* transform-origin: top right; */
+  transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-lightbox:target {
+  transform: scale(1, 1);
+}
+
+.portfolio-lightbox-content {
+  max-width: 75%;
+  background: black;
+  padding: 1rem;
+  line-height: 2.5;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background: red;
+  top: -1rem;
+  right: -1rem;
+  border-radius: 50%;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3px;
+  padding-right: 1px;
+}
+
+.close::after {
+  content: 'X';
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+}
