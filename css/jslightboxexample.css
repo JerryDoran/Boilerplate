@@ -1,11 +1,17 @@
 .gallery {
-  margin: 10px 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 5px;
+}
+
+.gallery a {
+  overflow: hidden;
 }
 
 .gallery img {
+  width: 351px;
+  height: 351px;
   transition: 1s;
-  padding: 10px;
-  width: 200px;
 }
 
 .gallery img:hover {
