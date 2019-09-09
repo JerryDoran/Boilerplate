@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Vanilla Javascript Carousel</title>
+    <link rel="stylesheet" href="css/carousel.css" />
+  </head>
+  <body>
+    <div class="carousel">
+      <!-- LEFT ARROW -->
+      <button class="carousel-button button-left">
+        <img src="images/prev.png" alt="" />
+      </button>
+
+      <div class="carousel-track-container">
+        <ul class="carousel-track">
+          <li class="carousel-slide current-slide">
+            <img class="carousel-image" src="images/image1.jpg" alt="" />
+          </li>
+          <li class="carousel-slide">
+            <img class="carousel-image" src="images/image2.jpg" alt="" />
+          </li>
+          <li class="carousel-slide">
+            <img class="carousel-image" src="images/image3.jpg" alt="" />
+          </li>
+        </ul>
+      </div>
+
+      <!-- RIGHT ARROW -->
+      <button class="carousel-button button-right">
+        <img src="images/next.png" alt="" />
+      </button>
+
+      <!-- INDICATORS -->
+      <div class="carousel-nav">
+        <button class="carousel-indicator current-slide"></button>
+        <button class="carousel-indicator"></button>
+        <button class="carousel-indicator"></button>
+      </div>
+    </div>
+
+    <script src="/js/carousel.js"></script>
+  </body>
+</html>
