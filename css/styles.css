@@ -11,6 +11,28 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'BetterFly';
+  src: url('../fonts/betterfly-draft-webfont.woff2') format('woff2'),
+    url('../fonts/betterfly-draft-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'BFNarrow';
+  src: url('../fonts/betterfly-narrow-webfont.woff2') format('woff2'),
+    url('../fonts/betterfly-narrow-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Crimson Text';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Crimson Text Italic'), local('CrimsonText-Italic'),
+    url('https://fonts.gstatic.com/s/crimsontext/v8/wlpogwHKFkZgtmSR3NB0oRJfajhRK_Z_3rhH.woff2')
+      format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA;
+}
+
 /* DECLARING CSS VARIABLES(CUSTOM PROPERTIES) */
 :root {
   /* Example colors */
